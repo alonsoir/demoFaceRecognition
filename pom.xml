@@ -8,6 +8,7 @@
 		<version>2.1.7.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.aironman</groupId>
 	<artifactId>demoFaceRecognition</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -17,10 +18,9 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<lombok.version>1.16.20</lombok.version>
-		<slf4j-version>1.7.25</slf4j-version>
 		<deeplearning4j.version>0.9.1</deeplearning4j.version>
 		<log4j-version>2.9.1</log4j-version>
-		<dl4j.version>1.0.0-beta</dl4j.version>
+		<dl4j.version>1.0.0-beta4</dl4j.version>
 		<ffmpeg.version>3.2.1-1.3</ffmpeg.version>
 		<javacv.version>1.4.1</javacv.version>
 	</properties>
@@ -81,52 +81,17 @@
 			<artifactId>javacv</artifactId>
 			<version>${javacv.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j-version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j-version}</version>
-			<scope>compile</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 		</dependency>
 
+		<!-- Add Log4j2 Dependency -->
 		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-core</artifactId>
-			<version>${deeplearning4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.nd4j</groupId>
-			<artifactId>nd4j-native-platform</artifactId>
-			<version>${deeplearning4j.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>${log4j-version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j-version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>${log4j-version}</version>
-			<scope>compile</scope>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 	</dependencies>
 
