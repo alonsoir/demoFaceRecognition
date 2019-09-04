@@ -115,7 +115,9 @@ public class FaceNetSmallV2Model {
                 .addLayer("dense", new DenseLayer.Builder().nIn(736).nOut(encodings)
                         .activation(Activation.IDENTITY).build(), "avgpool")
                 .addVertex("encodings", new L2NormalizeVertex(new int[]{}, 1e-12), "dense")
-                .setInputTypes(InputType.convolutional(96, 96, inputShape[0])).pretrain(true);
+                .setInputTypes(InputType.convolutional(96, 96, inputShape[0]));
+                // i had to pretrain in 1.0.0-BETA version
+                //.pretrain(true);
 
        /* Uncomment in case of training the network, graph.setOutputs should be lossLayer then
         .addLayer("lossLayer", new CenterLossOutputLayer.Builder()
