@@ -3,6 +3,10 @@ package com.aironman.demoFaceRecognition;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/***
+ * @author aironman
+ * @author klevis
+ */
 @SpringBootApplication
 public class DemoFaceRecognitionApplication {
 

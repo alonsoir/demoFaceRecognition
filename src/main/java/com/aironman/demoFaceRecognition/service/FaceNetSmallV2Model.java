@@ -20,6 +20,11 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import static com.aironman.demoFaceRecognition.service.FaceNetSmallV2Helper.*;
 
+
+/***
+ * @author aironman
+ * @author klevis
+ */
 @Service
 public class FaceNetSmallV2Model {
 

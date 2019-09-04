@@ -24,6 +24,10 @@ import java.util.stream.Collectors;
 import static com.aironman.demoFaceRecognition.service.FaceNetSmallV2Model.paddingIndex;
 import static com.aironman.demoFaceRecognition.service.FaceNetSmallV2Model.reluIndex;
 
+/***
+ * @author aironman
+ * @author klevis
+ */
 public class FaceNetSmallV2Helper {
 
     // TODO check this path

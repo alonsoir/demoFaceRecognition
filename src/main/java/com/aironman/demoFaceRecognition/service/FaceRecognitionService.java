@@ -10,6 +10,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+
+/***
+ * @author aironman
+ * @author klevis
+ */
 @Service
 public class FaceRecognitionService extends FaceRecognitionUtils implements FaceRecognition  {
 
