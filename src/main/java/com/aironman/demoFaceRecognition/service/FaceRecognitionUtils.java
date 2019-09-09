@@ -1,5 +1,7 @@
 package com.aironman.demoFaceRecognition.service;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bytedeco.javacpp.opencv_core;
 import org.bytedeco.javacpp.opencv_imgcodecs;
 import org.datavec.image.loader.NativeImageLoader;
@@ -20,6 +22,7 @@ import java.util.Map;
  */
 public abstract class FaceRecognitionUtils {
 
+    private static final Logger logger = LogManager.getLogger(FaceRecognitionUtils.class);
 
     public static final double THRESHOLD = 0.57;
     public FaceNetSmallV2Model faceNetSmallV2Model;
@@ -49,8 +52,8 @@ public abstract class FaceRecognitionUtils {
         INDArray dense = output.get("dense");
         embeddings.setInputs(dense);
         INDArray embeddingValues = embeddings.doForward(false, LayerWorkspaceMgr.builder().defaultNoWorkspace().build());
-        System.out.println("dense =                 " + dense);
-        System.out.println("encodingsValues =                 " + embeddingValues);
+        logger.info("dense =                 " + dense);
+        logger.info("encodingsValues =                 " + embeddingValues);
         return embeddingValues;
     }
 

@@ -30,7 +30,6 @@ import static com.aironman.demoFaceRecognition.service.FaceNetSmallV2Model.reluI
  */
 public class FaceNetSmallV2Helper {
 
-    // TODO check this path
     static final String BASE = "src/main/resources/face/";
 
     static ActivationLayer relu() {

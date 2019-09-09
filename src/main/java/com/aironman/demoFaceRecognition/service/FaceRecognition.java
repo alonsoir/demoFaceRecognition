@@ -1,5 +1,7 @@
 package com.aironman.demoFaceRecognition.service;
 
+import org.nd4j.linalg.api.ndarray.INDArray;
+
 import java.io.IOException;
 
 
@@ -10,7 +12,7 @@ import java.io.IOException;
 public interface FaceRecognition {
     // TODO check this generic exception
     boolean loadModel() throws Exception;
-    void registerNewMember(String memberId, String imagePath) throws IOException;
+    INDArray registerNewMember(String memberId, String imagePath) throws IOException;
     String whoIs(String imagePath) throws IOException;
 
 }

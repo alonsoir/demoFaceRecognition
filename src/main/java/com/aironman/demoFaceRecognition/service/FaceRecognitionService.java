@@ -43,9 +43,11 @@ public class FaceRecognitionService extends FaceRecognitionUtils implements Face
     }
 
     @Override
-    public void registerNewMember(String memberId, String imagePath) throws IOException {
+    public INDArray registerNewMember(String memberId, String imagePath) throws IOException {
         INDArray read = read(imagePath);
-        memberEncodingsMap.put(memberId, forwardPass(normalize(read)));
+        INDArray registered = memberEncodingsMap.put(memberId, forwardPass(normalize(read)));
+        logger.info(registered.toString());
+        return registered;
     }
 
     @Override
