@@ -22,7 +22,7 @@
 		<log4j-version>2.9.1</log4j-version>
 		<dl4j.version>1.0.0-beta4</dl4j.version>
 		<ffmpeg.version>4.1-1.4.4</ffmpeg.version>
-		<javacv.version>1.4.1</javacv.version>
+		<javacv.version>1.5.1</javacv.version>
 	</properties>
 
 	<dependencies>
